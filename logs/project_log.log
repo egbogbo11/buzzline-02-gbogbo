@@ -1,0 +1,133 @@
+2025-09-08 23:09:14 | INFO | Processing message: {"status": "cancelled", "flight": "UA456", "airline": "United", "gate": "B12"}
+2025-09-08 23:09:14 | WARNING | ALERT: Status pattern match 'CANCELLED'. Payload: {'status': 'cancelled', 'flight': 'UA456', 'airline': 'United', 'gate': 'B12'}
+2025-09-08 23:09:14 | WARNING | ALERT: Pattern match in text message: {"status": "cancelled", "flight": "UA456", "airline": "United", "gate": "B12"}
+2025-09-08 23:09:15 | INFO | Generated travel alert: {"status": "on_time", "flight": "B6222", "airline": "JetBlue", "price_drop": 120.0}
+2025-09-08 23:09:15 | INFO | Sent message to topic 'flight_alerts': {"status": "on_time", "flight": "B6222", "airline": "JetBlue", "price_drop": 120.0}
+2025-09-08 23:09:15 | INFO | Processing message: {"status": "on_time", "flight": "B6222", "airline": "JetBlue", "price_drop": 120.0}
+2025-09-08 23:09:15 | WARNING | ALERT: Price drop detected (price_drop=120.0 >= 50.0). Payload: {'status': 'on_time', 'flight': 'B6222', 'airline': 'JetBlue', 'price_drop': 120.0}
+2025-09-08 23:09:15 | WARNING | ALERT: Pattern match in text message: {"status": "on_time", "flight": "B6222", "airline": "JetBlue", "price_drop": 120.0}
+2025-09-08 23:09:16 | INFO | Generated travel alert: GATE_CHANGE: DL789 moved to A3
+2025-09-08 23:09:16 | INFO | Sent message to topic 'flight_alerts': GATE_CHANGE: DL789 moved to A3
+2025-09-08 23:09:16 | INFO | Processing message: GATE_CHANGE: DL789 moved to A3
+2025-09-08 23:09:16 | WARNING | ALERT: Pattern match in text message: GATE_CHANGE: DL789 moved to A3
+2025-09-08 23:09:17 | INFO | Generated travel alert: BOARDING: AA123 now boarding Group 1 at C17
+2025-09-08 23:09:17 | INFO | Sent message to topic 'flight_alerts': BOARDING: AA123 now boarding Group 1 at C17
+2025-09-08 23:09:17 | INFO | Processing message: BOARDING: AA123 now boarding Group 1 at C17
+2025-09-08 23:09:17 | WARNING | ALERT: Pattern match in text message: BOARDING: AA123 now boarding Group 1 at C17
+2025-09-08 23:09:18 | INFO | Generated travel alert: CANCELLED: UA456 due to weather
+2025-09-08 23:09:18 | INFO | Sent message to topic 'flight_alerts': CANCELLED: UA456 due to weather
+2025-09-08 23:09:18 | INFO | Processing message: CANCELLED: UA456 due to weather
+2025-09-08 23:09:18 | WARNING | ALERT: Pattern match in text message: CANCELLED: UA456 due to weather
+2025-09-08 23:09:19 | INFO | Generated travel alert: PRICE_DROP: NYC->LAX roundtrip fell by $120
+2025-09-08 23:09:19 | INFO | Sent message to topic 'flight_alerts': PRICE_DROP: NYC->LAX roundtrip fell by $120
+2025-09-08 23:09:19 | INFO | Processing message: PRICE_DROP: NYC->LAX roundtrip fell by $120
+2025-09-08 23:09:19 | WARNING | ALERT: Pattern match in text message: PRICE_DROP: NYC->LAX roundtrip fell by $120
+2025-09-08 23:09:20 | INFO | Generated travel alert: {"status": "delayed", "flight": "AA123", "airline": "American", "delay_minutes": 75}
+2025-09-08 23:09:20 | INFO | Sent message to topic 'flight_alerts': {"status": "delayed", "flight": "AA123", "airline": "American", "delay_minutes": 75}
+2025-09-08 23:09:20 | INFO | Processing message: {"status": "delayed", "flight": "AA123", "airline": "American", "delay_minutes": 75}
+2025-09-08 23:09:20 | WARNING | ALERT: Significant delay detected (delay_minutes=75 >= 60). Payload: {'status': 'delayed', 'flight': 'AA123', 'airline': 'American', 'delay_minutes': 75}
+2025-09-08 23:09:20 | WARNING | ALERT: Status pattern match 'DELAYED'. Payload: {'status': 'delayed', 'flight': 'AA123', 'airline': 'American', 'delay_minutes': 75}
+2025-09-08 23:09:20 | WARNING | ALERT: Pattern match in text message: {"status": "delayed", "flight": "AA123", "airline": "American", "delay_minutes": 75}
+2025-09-08 23:09:21 | INFO | Generated travel alert: {"status": "on_time", "flight": "DL789", "airline": "Delta", "gate": "A3"}
+2025-09-08 23:09:21 | INFO | Sent message to topic 'flight_alerts': {"status": "on_time", "flight": "DL789", "airline": "Delta", "gate": "A3"}
+2025-09-08 23:09:21 | INFO | Processing message: {"status": "on_time", "flight": "DL789", "airline": "Delta", "gate": "A3"}
+2025-09-08 23:09:22 | INFO | Generated travel alert: {"status": "cancelled", "flight": "UA456", "airline": "United", "gate": "B12"}
+2025-09-08 23:09:22 | INFO | Sent message to topic 'flight_alerts': {"status": "cancelled", "flight": "UA456", "airline": "United", "gate": "B12"}
+2025-09-08 23:09:22 | INFO | Processing message: {"status": "cancelled", "flight": "UA456", "airline": "United", "gate": "B12"}
+2025-09-08 23:09:22 | WARNING | ALERT: Status pattern match 'CANCELLED'. Payload: {'status': 'cancelled', 'flight': 'UA456', 'airline': 'United', 'gate': 'B12'}
+2025-09-08 23:09:22 | WARNING | ALERT: Pattern match in text message: {"status": "cancelled", "flight": "UA456", "airline": "United", "gate": "B12"}
+2025-09-08 23:09:23 | INFO | Generated travel alert: {"status": "on_time", "flight": "B6222", "airline": "JetBlue", "price_drop": 120.0}
+2025-09-08 23:09:23 | INFO | Sent message to topic 'flight_alerts': {"status": "on_time", "flight": "B6222", "airline": "JetBlue", "price_drop": 120.0}
+2025-09-08 23:09:23 | INFO | Processing message: {"status": "on_time", "flight": "B6222", "airline": "JetBlue", "price_drop": 120.0}
+2025-09-08 23:09:23 | WARNING | ALERT: Price drop detected (price_drop=120.0 >= 50.0). Payload: {'status': 'on_time', 'flight': 'B6222', 'airline': 'JetBlue', 'price_drop': 120.0}
+2025-09-08 23:09:23 | WARNING | ALERT: Pattern match in text message: {"status": "on_time", "flight": "B6222", "airline": "JetBlue", "price_drop": 120.0}
+2025-09-08 23:09:24 | INFO | Generated travel alert: GATE_CHANGE: DL789 moved to A3
+2025-09-08 23:09:24 | INFO | Sent message to topic 'flight_alerts': GATE_CHANGE: DL789 moved to A3
+2025-09-08 23:09:24 | INFO | Processing message: GATE_CHANGE: DL789 moved to A3
+2025-09-08 23:09:24 | WARNING | ALERT: Pattern match in text message: GATE_CHANGE: DL789 moved to A3
+2025-09-08 23:09:25 | INFO | Generated travel alert: BOARDING: AA123 now boarding Group 1 at C17
+2025-09-08 23:09:25 | INFO | Sent message to topic 'flight_alerts': BOARDING: AA123 now boarding Group 1 at C17
+2025-09-08 23:09:25 | INFO | Processing message: BOARDING: AA123 now boarding Group 1 at C17
+2025-09-08 23:09:25 | WARNING | ALERT: Pattern match in text message: BOARDING: AA123 now boarding Group 1 at C17
+2025-09-08 23:09:26 | INFO | Generated travel alert: CANCELLED: UA456 due to weather
+2025-09-08 23:09:26 | INFO | Sent message to topic 'flight_alerts': CANCELLED: UA456 due to weather
+2025-09-08 23:09:26 | INFO | Processing message: CANCELLED: UA456 due to weather
+2025-09-08 23:09:26 | WARNING | ALERT: Pattern match in text message: CANCELLED: UA456 due to weather
+2025-09-08 23:09:27 | INFO | Generated travel alert: PRICE_DROP: NYC->LAX roundtrip fell by $120
+2025-09-08 23:09:27 | INFO | Sent message to topic 'flight_alerts': PRICE_DROP: NYC->LAX roundtrip fell by $120
+2025-09-08 23:09:27 | INFO | Processing message: PRICE_DROP: NYC->LAX roundtrip fell by $120
+2025-09-08 23:09:27 | WARNING | ALERT: Pattern match in text message: PRICE_DROP: NYC->LAX roundtrip fell by $120
+2025-09-08 23:09:28 | INFO | Generated travel alert: {"status": "delayed", "flight": "AA123", "airline": "American", "delay_minutes": 75}
+2025-09-08 23:09:28 | INFO | Sent message to topic 'flight_alerts': {"status": "delayed", "flight": "AA123", "airline": "American", "delay_minutes": 75}
+2025-09-08 23:09:28 | INFO | Processing message: {"status": "delayed", "flight": "AA123", "airline": "American", "delay_minutes": 75}
+2025-09-08 23:09:28 | WARNING | ALERT: Significant delay detected (delay_minutes=75 >= 60). Payload: {'status': 'delayed', 'flight': 'AA123', 'airline': 'American', 'delay_minutes': 75}
+2025-09-08 23:09:28 | WARNING | ALERT: Status pattern match 'DELAYED'. Payload: {'status': 'delayed', 'flight': 'AA123', 'airline': 'American', 'delay_minutes': 75}
+2025-09-08 23:09:28 | WARNING | ALERT: Pattern match in text message: {"status": "delayed", "flight": "AA123", "airline": "American", "delay_minutes": 75}
+2025-09-08 23:09:29 | INFO | Generated travel alert: {"status": "on_time", "flight": "DL789", "airline": "Delta", "gate": "A3"}
+2025-09-08 23:09:29 | INFO | Sent message to topic 'flight_alerts': {"status": "on_time", "flight": "DL789", "airline": "Delta", "gate": "A3"}
+2025-09-08 23:09:29 | INFO | Processing message: {"status": "on_time", "flight": "DL789", "airline": "Delta", "gate": "A3"}
+2025-09-08 23:09:30 | INFO | Generated travel alert: {"status": "cancelled", "flight": "UA456", "airline": "United", "gate": "B12"}
+2025-09-08 23:09:30 | INFO | Sent message to topic 'flight_alerts': {"status": "cancelled", "flight": "UA456", "airline": "United", "gate": "B12"}
+2025-09-08 23:09:30 | INFO | Processing message: {"status": "cancelled", "flight": "UA456", "airline": "United", "gate": "B12"}
+2025-09-08 23:09:30 | WARNING | ALERT: Status pattern match 'CANCELLED'. Payload: {'status': 'cancelled', 'flight': 'UA456', 'airline': 'United', 'gate': 'B12'}
+2025-09-08 23:09:30 | WARNING | ALERT: Pattern match in text message: {"status": "cancelled", "flight": "UA456", "airline": "United", "gate": "B12"}
+2025-09-08 23:09:31 | INFO | Generated travel alert: {"status": "on_time", "flight": "B6222", "airline": "JetBlue", "price_drop": 120.0}
+2025-09-08 23:09:31 | INFO | Sent message to topic 'flight_alerts': {"status": "on_time", "flight": "B6222", "airline": "JetBlue", "price_drop": 120.0}
+2025-09-08 23:09:31 | INFO | Processing message: {"status": "on_time", "flight": "B6222", "airline": "JetBlue", "price_drop": 120.0}
+2025-09-08 23:09:31 | WARNING | ALERT: Price drop detected (price_drop=120.0 >= 50.0). Payload: {'status': 'on_time', 'flight': 'B6222', 'airline': 'JetBlue', 'price_drop': 120.0}
+2025-09-08 23:09:31 | WARNING | ALERT: Pattern match in text message: {"status": "on_time", "flight": "B6222", "airline": "JetBlue", "price_drop": 120.0}
+2025-09-08 23:09:32 | INFO | Generated travel alert: GATE_CHANGE: DL789 moved to A3
+2025-09-08 23:09:32 | INFO | Sent message to topic 'flight_alerts': GATE_CHANGE: DL789 moved to A3
+2025-09-08 23:09:32 | INFO | Processing message: GATE_CHANGE: DL789 moved to A3
+2025-09-08 23:09:32 | WARNING | ALERT: Pattern match in text message: GATE_CHANGE: DL789 moved to A3
+2025-09-08 23:09:33 | INFO | Generated travel alert: BOARDING: AA123 now boarding Group 1 at C17
+2025-09-08 23:09:33 | INFO | Sent message to topic 'flight_alerts': BOARDING: AA123 now boarding Group 1 at C17
+2025-09-08 23:09:33 | INFO | Processing message: BOARDING: AA123 now boarding Group 1 at C17
+2025-09-08 23:09:33 | WARNING | ALERT: Pattern match in text message: BOARDING: AA123 now boarding Group 1 at C17
+2025-09-08 23:09:34 | INFO | Generated travel alert: CANCELLED: UA456 due to weather
+2025-09-08 23:09:34 | INFO | Sent message to topic 'flight_alerts': CANCELLED: UA456 due to weather
+2025-09-08 23:09:34 | INFO | Processing message: CANCELLED: UA456 due to weather
+2025-09-08 23:09:34 | WARNING | ALERT: Pattern match in text message: CANCELLED: UA456 due to weather
+2025-09-08 23:09:35 | INFO | Generated travel alert: PRICE_DROP: NYC->LAX roundtrip fell by $120
+2025-09-08 23:09:35 | INFO | Sent message to topic 'flight_alerts': PRICE_DROP: NYC->LAX roundtrip fell by $120
+2025-09-08 23:09:35 | INFO | Processing message: PRICE_DROP: NYC->LAX roundtrip fell by $120
+2025-09-08 23:09:35 | WARNING | ALERT: Pattern match in text message: PRICE_DROP: NYC->LAX roundtrip fell by $120
+2025-09-08 23:09:36 | INFO | Generated travel alert: {"status": "delayed", "flight": "AA123", "airline": "American", "delay_minutes": 75}
+2025-09-08 23:09:36 | INFO | Sent message to topic 'flight_alerts': {"status": "delayed", "flight": "AA123", "airline": "American", "delay_minutes": 75}
+2025-09-08 23:09:36 | INFO | Processing message: {"status": "delayed", "flight": "AA123", "airline": "American", "delay_minutes": 75}
+2025-09-08 23:09:36 | WARNING | ALERT: Significant delay detected (delay_minutes=75 >= 60). Payload: {'status': 'delayed', 'flight': 'AA123', 'airline': 'American', 'delay_minutes': 75}
+2025-09-08 23:09:36 | WARNING | ALERT: Status pattern match 'DELAYED'. Payload: {'status': 'delayed', 'flight': 'AA123', 'airline': 'American', 'delay_minutes': 75}
+2025-09-08 23:09:36 | WARNING | ALERT: Pattern match in text message: {"status": "delayed", "flight": "AA123", "airline": "American", "delay_minutes": 75}
+2025-09-08 23:09:37 | INFO | Generated travel alert: {"status": "on_time", "flight": "DL789", "airline": "Delta", "gate": "A3"}
+2025-09-08 23:09:37 | INFO | Sent message to topic 'flight_alerts': {"status": "on_time", "flight": "DL789", "airline": "Delta", "gate": "A3"}
+2025-09-08 23:09:37 | INFO | Processing message: {"status": "on_time", "flight": "DL789", "airline": "Delta", "gate": "A3"}
+2025-09-08 23:09:38 | WARNING | Consumer interrupted by user.
+2025-09-08 23:09:38 | INFO | Kafka consumer for topic 'flight_alerts' closed.
+2025-09-08 23:09:38 | INFO | END consumer for topic 'flight_alerts' and group 'travel_consumer_group'.
+2025-09-08 23:09:38 | INFO | Generated travel alert: {"status": "cancelled", "flight": "UA456", "airline": "United", "gate": "B12"}
+2025-09-08 23:09:38 | INFO | Sent message to topic 'flight_alerts': {"status": "cancelled", "flight": "UA456", "airline": "United", "gate": "B12"}
+2025-09-08 23:09:39 | INFO | Generated travel alert: {"status": "on_time", "flight": "B6222", "airline": "JetBlue", "price_drop": 120.0}
+2025-09-08 23:09:39 | INFO | Sent message to topic 'flight_alerts': {"status": "on_time", "flight": "B6222", "airline": "JetBlue", "price_drop": 120.0}
+2025-09-08 23:09:40 | INFO | Generated travel alert: GATE_CHANGE: DL789 moved to A3
+2025-09-08 23:09:40 | INFO | Sent message to topic 'flight_alerts': GATE_CHANGE: DL789 moved to A3
+2025-09-08 23:09:41 | INFO | Generated travel alert: BOARDING: AA123 now boarding Group 1 at C17
+2025-09-08 23:09:41 | INFO | Sent message to topic 'flight_alerts': BOARDING: AA123 now boarding Group 1 at C17
+2025-09-08 23:09:42 | INFO | Generated travel alert: CANCELLED: UA456 due to weather
+2025-09-08 23:09:42 | INFO | Sent message to topic 'flight_alerts': CANCELLED: UA456 due to weather
+2025-09-08 23:09:43 | INFO | Generated travel alert: PRICE_DROP: NYC->LAX roundtrip fell by $120
+2025-09-08 23:09:43 | INFO | Sent message to topic 'flight_alerts': PRICE_DROP: NYC->LAX roundtrip fell by $120
+2025-09-08 23:09:44 | INFO | Generated travel alert: {"status": "delayed", "flight": "AA123", "airline": "American", "delay_minutes": 75}
+2025-09-08 23:09:44 | INFO | Sent message to topic 'flight_alerts': {"status": "delayed", "flight": "AA123", "airline": "American", "delay_minutes": 75}
+2025-09-08 23:09:45 | INFO | Generated travel alert: {"status": "on_time", "flight": "DL789", "airline": "Delta", "gate": "A3"}
+2025-09-08 23:09:45 | INFO | Sent message to topic 'flight_alerts': {"status": "on_time", "flight": "DL789", "airline": "Delta", "gate": "A3"}
+2025-09-08 23:09:46 | INFO | Generated travel alert: {"status": "cancelled", "flight": "UA456", "airline": "United", "gate": "B12"}
+2025-09-08 23:09:46 | INFO | Sent message to topic 'flight_alerts': {"status": "cancelled", "flight": "UA456", "airline": "United", "gate": "B12"}
+2025-09-08 23:09:47 | INFO | Generated travel alert: {"status": "on_time", "flight": "B6222", "airline": "JetBlue", "price_drop": 120.0}
+2025-09-08 23:09:47 | INFO | Sent message to topic 'flight_alerts': {"status": "on_time", "flight": "B6222", "airline": "JetBlue", "price_drop": 120.0}
+2025-09-08 23:09:48 | INFO | Generated travel alert: GATE_CHANGE: DL789 moved to A3
+2025-09-08 23:09:48 | INFO | Sent message to topic 'flight_alerts': GATE_CHANGE: DL789 moved to A3
+2025-09-08 23:09:49 | INFO | Generated travel alert: BOARDING: AA123 now boarding Group 1 at C17
+2025-09-08 23:09:49 | INFO | Sent message to topic 'flight_alerts': BOARDING: AA123 now boarding Group 1 at C17
+2025-09-08 23:09:50 | WARNING | Producer interrupted by user.
+2025-09-08 23:09:50 | INFO | Kafka producer closed.
+2025-09-08 23:09:50 | INFO | END producer.

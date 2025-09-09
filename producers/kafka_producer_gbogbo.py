@@ -1,7 +1,8 @@
 """
-kafka_producer_case.py
+kafka_producer_gbogbo.py
 
-Produce some streaming buzz strings and send them to a Kafka topic.
+Produce travel/flight alert messages and send them to a Kafka topic.
+Small changes: default topic + flight-themed sample messages (text + JSON).
 """
 
 #####################################
@@ -9,9 +10,11 @@ Produce some streaming buzz strings and send them to a Kafka topic.
 #####################################
 
 # Import packages from Python Standard Library
+import json
 import os
 import sys
 import time
+from typing import Iterable, Union
 
 # Import external packages
 from dotenv import load_dotenv
@@ -25,7 +28,6 @@ from utils.utils_producer import (
 from utils.utils_logger import logger
 
 
-
 #####################################
 # Getter Functions for .env Variables
 #####################################
@@ -33,7 +35,7 @@ from utils.utils_logger import logger
 
 def get_kafka_topic() -> str:
     """Fetch Kafka topic from environment or use default."""
-    topic = os.getenv("KAFKA_TOPIC", "buzz_topic")
+    topic = os.getenv("KAFKA_TOPIC", "flight_alerts")
     logger.info(f"Kafka topic: {topic}")
     return topic
 
@@ -50,9 +52,29 @@ def get_message_interval() -> int:
 #####################################
 
 
-def generate_messages(producer, topic, interval_secs):
+def _travel_messages() -> Iterable[Union[str, dict]]:
     """
-    Generate a stream of buzz messages and send them to a Kafka topic.
+    A small rotating set of flight-themed messages.
+    Mix of plaintext and JSON (as dict) so the consumer can do simple analytics.
+    """
+    return [
+        # Plain text that should match your ALERT_PATTERNS (DELAY, CANCELLED, etc.)
+        "GATE_CHANGE: DL789 moved to A3",
+        "BOARDING: AA123 now boarding Group 1 at C17",
+        "CANCELLED: UA456 due to weather",
+        "PRICE_DROP: NYC->LAX roundtrip fell by $120",
+
+        # JSON samples for numeric/status-based alerts your consumer looks for
+        {"status": "delayed", "flight": "AA123", "airline": "American", "delay_minutes": 75},
+        {"status": "on_time", "flight": "DL789", "airline": "Delta", "gate": "A3"},
+        {"status": "cancelled", "flight": "UA456", "airline": "United", "gate": "B12"},
+        {"status": "on_time", "flight": "B6222", "airline": "JetBlue", "price_drop": 120.0},
+    ]
+
+
+def generate_messages(producer, topic: str, interval_secs: int) -> None:
+    """
+    Generate a stream of flight alert messages and send them to a Kafka topic.
 
     Args:
         producer (KafkaProducer): The Kafka producer instance.
@@ -60,17 +82,15 @@ def generate_messages(producer, topic, interval_secs):
         interval_secs (int): Time in seconds between sending messages.
 
     """
-    string_list: list = [
-        "I love Python!",
-        "Kafka is awesome.",
-        "Streaming data is fun.",
-        "This is a buzz message.",
-        "Have a great day!",
-    ]
     try:
         while True:
-            for message in string_list:
-                logger.info(f"Generated buzz: {message}")
+            for item in _travel_messages():
+                if isinstance(item, dict):
+                    message = json.dumps(item)
+                else:
+                    message = str(item)
+
+                logger.info(f"Generated travel alert: {message}")
                 producer.send(topic, value=message)
                 logger.info(f"Sent message to topic '{topic}': {message}")
                 time.sleep(interval_secs)
@@ -79,6 +99,10 @@ def generate_messages(producer, topic, interval_secs):
     except Exception as e:
         logger.error(f"Error in message generation: {e}")
     finally:
+        try:
+            producer.flush()
+        except Exception:
+            pass
         producer.close()
         logger.info("Kafka producer closed.")
 
@@ -88,13 +112,13 @@ def generate_messages(producer, topic, interval_secs):
 #####################################
 
 
-def main():
+def main() -> None:
     """
     Main entry point for this producer.
 
     - Ensures the Kafka topic exists.
     - Creates a Kafka producer using the `create_kafka_producer` utility.
-    - Streams generated buzz message strings to the Kafka topic.
+    - Streams travel/flight alert messages to the Kafka topic.
     """
     logger.info("START producer.")
     logger.info("Loading environment variables from .env file...")
